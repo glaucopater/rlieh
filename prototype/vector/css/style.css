@@ -1,0 +1,521 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f3f3;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1010px;
+}
+
+.red {
+  background-color: #d42424;
+}
+
+.red-opacity {
+  background-color: rgba(212, 36, 36, 0.75);
+}
+
+.red-svg polygon {
+  fill: #d42424;
+}
+
+.red-svg-opacity polygon {
+  fill: rgba(212, 36, 36, 0.75);
+}
+
+.orange {
+  background-color: #fc4f0b;
+}
+
+.orange-opacity {
+  background-color: rgba(252, 79, 11, 0.75);
+}
+
+.orange-svg polygon {
+  fill: #fc4f0b;
+}
+
+.orange-svg-opacity polygon {
+  fill: rgba(252, 79, 11, 0.75);
+}
+
+.yellow {
+  background-color: #ffe600;
+}
+
+.yellow-opacity {
+  background-color: rgba(255, 230, 0, 0.75);
+}
+
+.yellow-svg polygon {
+  fill: #ffe600;
+}
+
+.yellow-svg-opacity polygon {
+  fill: rgba(255, 230, 0, 0.75);
+}
+
+.blue {
+  background-color: #13459e;
+}
+
+.blue-opacity {
+  background-color: rgba(19, 69, 158, 0.75);
+}
+
+.blue-svg polygon {
+  fill: #13459e;
+}
+
+.blue-svg-opacity polygon {
+  fill: rgba(19, 69, 158, 0.75);
+}
+
+.lightBlue {
+  background-color: #9cbbff;
+}
+
+.lightBlue-opacity {
+  background-color: rgba(156, 187, 255, 0.75);
+}
+
+.lightBlue-svg polygon {
+  fill: #9cbbff;
+}
+
+.lightBlue-svg-opacity polygon {
+  fill: rgba(156, 187, 255, 0.75);
+}
+
+main {
+  display: grid;
+  width: 1000px;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: none;
+  grid-auto-rows: 35px;
+}
+
+.rectangle-1 {
+  grid-column: 8 / span 11;
+  grid-row: 4 / span 4;
+}
+
+.rectangle-2 {
+  grid-column: 18 / span 3;
+  grid-row: 2 / span 3;
+}
+
+.rectangle-3 {
+  grid-column: 16 / span 3;
+  grid-row: 8 / span 3;
+}
+
+.rectangle-4 {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+.circle-1-container {
+  grid-column: 10 / span 8;
+  grid-row: 2 / span 11;
+}
+
+.circle-1 {
+  border-radius: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.triangle-1 {
+  grid-column: 7 / span 4;
+  grid-row: 2 / span 7;
+}
+
+.triangle-2 {
+  grid-column: 6 / span 7;
+  grid-row: 10 / span 5;
+}
+
+.triangle-3 {
+  grid-column: 9 / span 7;
+  grid-row: 8 / span 8;
+}
+
+.triangle-4 {
+  grid-column: 4 / span 10;
+  grid-row: 11 / span 6;
+}
+
+.dot-1, .dot-2, .dot-3, .dot-4, .dot-5 {
+  position: relative;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.dot-1-container {
+  grid-column: 11;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.dot-1 {
+  left: -13px;
+  bottom: -2px;
+}
+
+.dot-2-container {
+  grid-column: 2;
+  grid-row: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.dot-2 {
+  top: -11px;
+  right: -2px;
+}
+
+.dot-3-container {
+  grid-column: 3;
+  grid-row: 8;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.dot-3 {
+  top: -13px;
+  right: -11px;
+}
+
+.dot-4-container {
+  grid-column: 16;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.dot-4 {
+  left: 12px;
+  bottom: -10px;
+}
+
+.dot-5-container {
+  grid-column: 10;
+  grid-row: 18;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.dot-5 {
+  bottom: -10px;
+}
+
+.outline-1 {
+  grid-column: 1 / span 10;
+  grid-row: 2 / span 7;
+  border-top: 4px solid;
+  border-right: 4px solid;
+}
+
+.outline-2 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+  border-left: 4px solid;
+  border-bottom: 4px solid;
+}
+
+.outline-3 {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 5;
+  border-right: 4px solid;
+}
+
+.outline-4 {
+  grid-column: 16 / span 5;
+  grid-row: 1 / span 4;
+  border-right: 4px solid;
+  border-bottom: 4px solid;
+}
+
+.outline-5 {
+  grid-column: 19 / span 1;
+  grid-row: 5 / span 7;
+  border-right: 4px solid;
+}
+
+.outline-6 {
+  position: relative;
+  grid-column: 3 / span 9;
+  grid-row: 10 / span 1;
+  border-top: 4px solid;
+}
+
+.outline-7 {
+  grid-column: 14 / span 4;
+  grid-row: 2 / span 8;
+  border-left: 5px solid;
+  -webkit-transform: skew(-31.8deg) translate3d(33.5px, 3px, 0);
+          transform: skew(-31.8deg) translate3d(33.5px, 3px, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+}
+.outline-7 div {
+  height: 20px;
+  width: 55px;
+  background-color: #000;
+  margin-bottom: 8px;
+  margin-left: -1px;
+}
+
+.outline-8 {
+  grid-column: 11 / span 5;
+  grid-row: 16 / span 3;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+}
+
+.outline-9 {
+  grid-column: 16 / span 4;
+  grid-row: 12 / span 4;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.outline-9 div {
+  height: 100%;
+  width: 7px;
+  background-color: #000;
+  -webkit-transform: skew(-55deg) translate3d(-1px, 0, 0);
+          transform: skew(-55deg) translate3d(-1px, 0, 0);
+}
+
+.outline-10,
+.outline-10-triangles {
+  grid-column: 4 / span 2;
+  grid-row: 8 / span 2;
+}
+
+.outline-10 {
+  display: flex;
+  justify-content: center;
+}
+.outline-10 div {
+  height: 100%;
+  width: 7px;
+  background-color: #000;
+  -webkit-transform: skew(55deg);
+          transform: skew(55deg);
+}
+
+.outline-10-triangles .triangles {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-transform: rotate(-55deg);
+          transform: rotate(-55deg);
+}
+.outline-10-triangles .triangles div {
+  height: 0;
+  width: 0;
+  border-top: 15px solid;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+}
+
+.outline-11 {
+  grid-column: 2 / span 1;
+  grid-row: 17 / span 2;
+  border-left: 4px solid;
+}
+
+.outline-12 {
+  grid-column: 2 / span 5;
+  grid-row: 10 / span 7;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.outline-12 div {
+  height: 100%;
+  width: 5px;
+  background-color: #000;
+  -webkit-transform: skew(-45deg) scale(1, 0.95) translate3d(-1px, 15px, 0);
+          transform: skew(-45deg) scale(1, 0.95) translate3d(-1px, 15px, 0);
+  box-shadow: 1px 1px 0 0 #000;
+}
+
+.outline-13 {
+  grid-column: 2 / span 2;
+  grid-row: 15 / span 2;
+  display: flex;
+  justify-content: center;
+}
+.outline-13 div {
+  height: 100%;
+  width: 4px;
+  background-color: #000;
+  -webkit-transform: rotate(-45deg) translate3d(13px, 11px, 0) scale(1, 1.4);
+          transform: rotate(-45deg) translate3d(13px, 11px, 0) scale(1, 1.4);
+}
+
+.outline-14 {
+  grid-column: 1 / span 2;
+  grid-row: 15 / span 2;
+  display: flex;
+  justify-content: center;
+}
+.outline-14 div {
+  height: 100%;
+  width: 4px;
+  background-color: #000;
+  -webkit-transform: rotate(45deg) translate3d(-1px, -1px, 0) scale(1, 1.4);
+          transform: rotate(45deg) translate3d(-1px, -1px, 0) scale(1, 1.4);
+}
+
+.text {
+  grid-column: 2 / span 5;
+  grid-row: 10 / span 7;
+}
+.text svg {
+  -webkit-transform: rotate(-45deg) translate3d(-37px, 123px, 0);
+          transform: rotate(-45deg) translate3d(-37px, 123px, 0);
+}
+
+.rectangle-1 {
+  z-index: 0;
+}
+
+.rectangle-2 {
+  z-index: 10;
+}
+
+.outline-4 {
+  z-index: 20;
+}
+
+.circle-1-container {
+  z-index: 30;
+}
+
+.rectangle-3 {
+  z-index: 40;
+}
+
+.triangle-3 {
+  z-index: 50;
+}
+
+.triangle-1 {
+  z-index: 60;
+}
+
+.triangle-4 {
+  z-index: 70;
+}
+
+.triangle-2 {
+  z-index: 80;
+}
+
+.outline-1 {
+  z-index: 90;
+}
+
+.outline-2 {
+  z-index: 100;
+}
+
+.outline-3 {
+  z-index: 110;
+}
+
+.outline-5 {
+  z-index: 120;
+}
+
+.outline-6 {
+  z-index: 130;
+}
+
+.outline-7 {
+  z-index: 140;
+}
+
+.outline-8 {
+  z-index: 150;
+}
+
+.outline-9 {
+  z-index: 160;
+}
+
+.outline-10 {
+  z-index: 170;
+}
+
+.outline-10-triangles {
+  z-index: 180;
+}
+
+.outline-11 {
+  z-index: 190;
+}
+
+.outline-12 {
+  z-index: 200;
+}
+
+.outline-13 {
+  z-index: 210;
+}
+
+.outline-14 {
+  z-index: 220;
+}
+
+.rectangle-4 {
+  z-index: 230;
+}
+
+.dot-1-container {
+  z-index: 240;
+}
+
+.dot-2-container {
+  z-index: 250;
+}
+
+.dot-3-container {
+  z-index: 260;
+}
+
+.dot-4-container {
+  z-index: 270;
+}
+
+.dot-5-container {
+  z-index: 280;
+}
+
+.text {
+  z-index: 290;
+}
