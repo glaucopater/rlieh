@@ -7,6 +7,7 @@
 body {
   margin: 0;
   background-color: #f3f3f3;
+  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=d7c5b7ff&noise=626262&density=50&opacity=26");
   height: 100vh;
   display: flex;
   align-items: center;
