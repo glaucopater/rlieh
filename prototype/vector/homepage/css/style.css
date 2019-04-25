@@ -430,6 +430,10 @@ main {
   margin: 5px 150px 100px 100px;
   text-transform: uppercase;
 }
+.text a {
+  color: black;
+  text-decoration: none;
+}
 
 .rectangle-1 {
   z-index: 0;
@@ -556,6 +560,8 @@ main {
 }
 .highlight:hover {
   cursor: pointer;
-  background-color: white;
   color: white;
+}
+.highlight:hover:not(a) {
+  background-color: white;
 }
