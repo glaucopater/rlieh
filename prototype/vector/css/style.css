@@ -17,6 +17,7 @@ body {
 
 .red {
   background-color: #d42424;
+  opacity: 1;
 }
 
 .red-opacity {
@@ -33,6 +34,7 @@ body {
 
 .orange {
   background-color: #fc4f0b;
+  opacity: 1;
 }
 
 .orange-opacity {
@@ -49,6 +51,7 @@ body {
 
 .yellow {
   background-color: #ffe600;
+  opacity: 1;
 }
 
 .yellow-opacity {
@@ -65,6 +68,7 @@ body {
 
 .blue {
   background-color: #13459e;
+  opacity: 1;
 }
 
 .blue-opacity {
@@ -81,6 +85,7 @@ body {
 
 .lightBlue {
   background-color: #9cbbff;
+  opacity: 1;
 }
 
 .lightBlue-opacity {
@@ -93,6 +98,23 @@ body {
 
 .lightBlue-svg-opacity polygon {
   fill: rgba(156, 187, 255, 0.75);
+}
+
+.green {
+  background-color: #00ff00;
+  opacity: 1;
+}
+
+.green-opacity {
+  background-color: rgba(0, 255, 0, 0.75);
+}
+
+.green-svg polygon {
+  fill: #00ff00;
+}
+
+.green-svg-opacity polygon {
+  fill: rgba(0, 255, 0, 0.75);
 }
 
 main {
@@ -132,6 +154,12 @@ main {
   border-radius: 50%;
   width: 100%;
   padding-bottom: 100%;
+  border-color: #000;
+  fill: rgba(255, 255, 255, 0.75);
+}
+.circle-1:hover {
+  cursor: pointer;
+  fill: rgba(255, 255, 255, 0.75);
 }
 
 .triangle-1 {
@@ -395,10 +423,12 @@ main {
 .text {
   grid-column: 2 / span 5;
   grid-row: 10 / span 7;
-}
-.text svg {
+  font-family: "Baumans", cursive;
   -webkit-transform: rotate(-45deg) translate3d(-37px, 123px, 0);
           transform: rotate(-45deg) translate3d(-37px, 123px, 0);
+  font-size: 300%;
+  margin: 5px 150px 100px 100px;
+  text-transform: uppercase;
 }
 
 .rectangle-1 {
@@ -519,4 +549,13 @@ main {
 
 .text {
   z-index: 290;
+}
+
+.highlight {
+  transition: all 2s ease-out;
+}
+.highlight:hover {
+  cursor: pointer;
+  background-color: white;
+  color: white;
 }

@@ -10,6 +10,8 @@
 body {
     margin: 0;
     background-color: #f3f3f3;
+    background: url("http://api.thumbr.it/whitenoise-361x370.png?background=d7c5b7ff&noise=626262&density=50&opacity=26");
+
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,32 +19,30 @@ body {
     min-width: 1010px;
 }
 
-
 //
 // Colors
 // -----------------------------------------
 
-$colors: (
-    red: #d42424,
-    orange: #fc4f0b,
-    yellow: #ffe600,
-    blue: #13459e,
-    lightBlue: #9cbbff
-);
+$colors: (red: #d42424,
+orange: #fc4f0b,
+yellow: #ffe600,
+blue: #13459e,
+lightBlue: #9cbbff,
+green: #00ff00);
 
-@each $color, $hex in $colors {
-
+@each $color,
+$hex in $colors {
     // CSS shapes
     // ----------------------
 
     .#{$color} {
         background-color: #{$hex};
+        opacity: 1;
     }
 
     .#{$color}-opacity {
-        background-color: rgba($hex, .75);
+        background-color: rgba($hex, 0.75);
     }
-
 
     // SVG shapes
     // ----------------------
@@ -55,11 +55,10 @@ $colors: (
 
     .#{$color}-svg-opacity {
         polygon {
-            fill: rgba($hex, .75);
+            fill: rgba($hex, 0.75);
         }
     }
 }
-
 
 //
 // Grid content
@@ -72,7 +71,6 @@ main {
     grid-template-rows: none;
     grid-auto-rows: 35px;
 }
-
 
 // Rectangles
 // ----------------------
@@ -97,7 +95,6 @@ main {
     grid-row: 2;
 }
 
-
 // Circles
 // ----------------------
 
@@ -110,8 +107,14 @@ main {
     border-radius: 50%;
     width: 100%;
     padding-bottom: 100%;
-}
+    border-color: #000;
+    fill: rgba(white, 0.75);
 
+    &:hover {
+        cursor: pointer;
+        fill: rgba(white, 0.75);
+    }
+}
 
 // Triangle containers
 // ----------------------
@@ -135,7 +138,6 @@ main {
     grid-column: 4 / span 10;
     grid-row: 11 / span 6;
 }
-
 
 // Dots
 // ----------------------
@@ -217,7 +219,6 @@ main {
     bottom: -10px;
 }
 
-
 // Outlines
 // ----------------------
 
@@ -298,7 +299,7 @@ main {
         height: 100%;
         width: 7px;
         background-color: #000;
-        transform: skew(-55deg) translate3d(-1px,0,0);
+        transform: skew(-55deg) translate3d(-1px, 0, 0);
     }
 }
 
@@ -337,7 +338,6 @@ main {
             border-right: 22px solid transparent;
         }
     }
-
 }
 
 .outline-11 {
@@ -386,10 +386,9 @@ main {
         height: 100%;
         width: 4px;
         background-color: #000;
-        transform: rotate(45deg) translate3d(-1px,-1px,0) scale(1, 1.4);
+        transform: rotate(45deg) translate3d(-1px, -1px, 0) scale(1, 1.4);
     }
 }
-
 
 // Text
 // ----------------------
@@ -397,52 +396,65 @@ main {
 .text {
     grid-column: 2 / span 5;
     grid-row: 10 / span 7;
-
-    svg {
-        transform: rotate(-45deg) translate3d(-37px, 123px, 0);
-    }
+    font-family: "Baumans", cursive;
+    transform: rotate(-45deg) translate3d(-37px, 123px, 0);
+    font-size: 300%;
+    margin: 5px 150px 100px 100px;
+    text-transform: uppercase;
 }
-
 
 //
 // Z-index
 // -----------------------------------------
 
-$z-index: (
-    rectangle-1: 0,
-    rectangle-2: 10,
-    outline-4: 20,
-    circle-1-container: 30,
-    rectangle-3: 40,
-    triangle-3: 50,
-    triangle-1: 60,
-    triangle-4: 70,
-    triangle-2: 80,
-    outline-1: 90,
-    outline-2: 100,
-    outline-3: 110,
-    outline-5: 120,
-    outline-6: 130,
-    outline-7: 140,
-    outline-8: 150,
-    outline-9: 160,
-    outline-10: 170,
-    outline-10-triangles: 180,
-    outline-11: 190,
-    outline-12: 200,
-    outline-13: 210,
-    outline-14: 220,
-    rectangle-4: 230,
-    dot-1-container: 240,
-    dot-2-container: 250,
-    dot-3-container: 260,
-    dot-4-container: 270,
-    dot-5-container: 280,
-    text: 290
-);
+$z-index: (rectangle-1: 0,
+rectangle-2: 10,
+outline-4: 20,
+circle-1-container: 30,
+rectangle-3: 40,
+triangle-3: 50,
+triangle-1: 60,
+triangle-4: 70,
+triangle-2: 80,
+outline-1: 90,
+outline-2: 100,
+outline-3: 110,
+outline-5: 120,
+outline-6: 130,
+outline-7: 140,
+outline-8: 150,
+outline-9: 160,
+outline-10: 170,
+outline-10-triangles: 180,
+outline-11: 190,
+outline-12: 200,
+outline-13: 210,
+outline-14: 220,
+rectangle-4: 230,
+dot-1-container: 240,
+dot-2-container: 250,
+dot-3-container: 260,
+dot-4-container: 270,
+dot-5-container: 280,
+text: 290);
 
-@each $class, $value in $z-index {
+@each $class,
+$value in $z-index {
     .#{$class} {
         z-index: $value;
+    }
+}
+
+.highlight {
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -ms-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: white;
     }
 }
