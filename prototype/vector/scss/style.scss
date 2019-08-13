@@ -23,11 +23,11 @@ body {
 // -----------------------------------------
 
 $colors: (red: #d42424,
-orange: #fc4f0b,
-yellow: #ffe600,
-blue: #13459e,
-lightBlue: #9cbbff,
-green: #00ff00);
+    orange: #fc4f0b,
+    yellow: #ffe600,
+    blue: #13459e,
+    lightBlue: #9cbbff,
+    green: #00ff00);
 
 @each $color,
 $hex in $colors {
@@ -398,7 +398,7 @@ main {
     font-family: "Baumans", cursive;
     transform: rotate(-45deg) translate3d(-37px, 123px, 0);
     font-size: 300%;
-    margin: 5px 150px 100px 100px;
+    margin: 5px 100px 200px 20px;
     text-transform: uppercase;
 
     a {
@@ -412,35 +412,35 @@ main {
 // -----------------------------------------
 
 $z-index: (rectangle-1: 0,
-rectangle-2: 10,
-outline-4: 20,
-circle-1-container: 30,
-rectangle-3: 40,
-triangle-3: 50,
-triangle-1: 60,
-triangle-4: 70,
-triangle-2: 80,
-outline-1: 90,
-outline-2: 100,
-outline-3: 110,
-outline-5: 120,
-outline-6: 130,
-outline-7: 140,
-outline-8: 150,
-outline-9: 160,
-outline-10: 170,
-outline-10-triangles: 180,
-outline-11: 190,
-outline-12: 200,
-outline-13: 210,
-outline-14: 220,
-rectangle-4: 230,
-dot-1-container: 240,
-dot-2-container: 250,
-dot-3-container: 260,
-dot-4-container: 270,
-dot-5-container: 280,
-text: 290);
+    rectangle-2: 10,
+    outline-4: 20,
+    circle-1-container: 30,
+    rectangle-3: 40,
+    triangle-3: 50,
+    triangle-1: 60,
+    triangle-4: 70,
+    triangle-2: 80,
+    outline-1: 90,
+    outline-2: 100,
+    outline-3: 110,
+    outline-5: 120,
+    outline-6: 130,
+    outline-7: 140,
+    outline-8: 150,
+    outline-9: 160,
+    outline-10: 170,
+    outline-10-triangles: 180,
+    outline-11: 190,
+    outline-12: 200,
+    outline-13: 210,
+    outline-14: 220,
+    rectangle-4: 230,
+    dot-1-container: 240,
+    dot-2-container: 250,
+    dot-3-container: 260,
+    dot-4-container: 270,
+    dot-5-container: 280,
+    text: 290);
 
 @each $class,
 $value in $z-index {

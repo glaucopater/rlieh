@@ -1,5 +1,5 @@
-Abstract of the Rlieh Project
-===
-The New Homepage with interactive Menu
+# Abstract of the Rlieh Project
+
+A new Homepage with "interactive" menu
 
 ![demo](prototype/raster_1024.jpg)
