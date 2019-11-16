@@ -6,13 +6,17 @@
 
 body {
   margin: 0;
-  background-color: #f3f3f3;
-  background: url("../images/whitenoise-361x370.png");
+  background-image: linear-gradient(to bottom right, red, yellow);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 1010px;
+  font-family: 'Baumans', cursive;
+}
+
+h1 {
+  margin: 0 5px;
 }
 
 .red {
@@ -157,6 +161,7 @@ main {
   border-color: #000;
   fill: rgba(255, 255, 255, 0.75);
 }
+
 .circle-1:hover {
   cursor: pointer;
   fill: rgba(255, 255, 255, 0.75);
@@ -182,7 +187,11 @@ main {
   grid-row: 11 / span 6;
 }
 
-.dot-1, .dot-2, .dot-3, .dot-4, .dot-5 {
+.dot-1,
+.dot-2,
+.dot-3,
+.dot-4,
+.dot-5 {
   position: relative;
   height: 26px;
   width: 26px;
@@ -299,12 +308,13 @@ main {
   grid-row: 2 / span 8;
   border-left: 5px solid;
   -webkit-transform: skew(-31.8deg) translate3d(33.5px, 3px, 0);
-          transform: skew(-31.8deg) translate3d(33.5px, 3px, 0);
+  transform: skew(-31.8deg) translate3d(33.5px, 3px, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 20px;
 }
+
 .outline-7 div {
   height: 20px;
   width: 55px;
@@ -327,12 +337,13 @@ main {
   justify-content: center;
   overflow: hidden;
 }
+
 .outline-9 div {
   height: 100%;
   width: 7px;
   background-color: #000;
   -webkit-transform: skew(-55deg) translate3d(-1px, 0, 0);
-          transform: skew(-55deg) translate3d(-1px, 0, 0);
+  transform: skew(-55deg) translate3d(-1px, 0, 0);
 }
 
 .outline-10,
@@ -345,12 +356,13 @@ main {
   display: flex;
   justify-content: center;
 }
+
 .outline-10 div {
   height: 100%;
   width: 7px;
   background-color: #000;
   -webkit-transform: skew(55deg);
-          transform: skew(55deg);
+  transform: skew(55deg);
 }
 
 .outline-10-triangles .triangles {
@@ -360,8 +372,9 @@ main {
   align-items: center;
   justify-content: space-between;
   -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  transform: rotate(-55deg);
 }
+
 .outline-10-triangles .triangles div {
   height: 0;
   width: 0;
@@ -383,12 +396,13 @@ main {
   justify-content: center;
   overflow: hidden;
 }
+
 .outline-12 div {
   height: 100%;
   width: 5px;
   background-color: #000;
   -webkit-transform: skew(-45deg) scale(1, 0.95) translate3d(-1px, 15px, 0);
-          transform: skew(-45deg) scale(1, 0.95) translate3d(-1px, 15px, 0);
+  transform: skew(-45deg) scale(1, 0.95) translate3d(-1px, 15px, 0);
   box-shadow: 1px 1px 0 0 #000;
 }
 
@@ -398,12 +412,13 @@ main {
   display: flex;
   justify-content: center;
 }
+
 .outline-13 div {
   height: 100%;
   width: 4px;
   background-color: #000;
   -webkit-transform: rotate(-45deg) translate3d(13px, 11px, 0) scale(1, 1.4);
-          transform: rotate(-45deg) translate3d(13px, 11px, 0) scale(1, 1.4);
+  transform: rotate(-45deg) translate3d(13px, 11px, 0) scale(1, 1.4);
 }
 
 .outline-14 {
@@ -412,12 +427,13 @@ main {
   display: flex;
   justify-content: center;
 }
+
 .outline-14 div {
   height: 100%;
   width: 4px;
   background-color: #000;
   -webkit-transform: rotate(45deg) translate3d(-1px, -1px, 0) scale(1, 1.4);
-          transform: rotate(45deg) translate3d(-1px, -1px, 0) scale(1, 1.4);
+  transform: rotate(45deg) translate3d(-1px, -1px, 0) scale(1, 1.4);
 }
 
 .text {
@@ -425,11 +441,12 @@ main {
   grid-row: 10 / span 7;
   font-family: "Baumans", cursive;
   -webkit-transform: rotate(-45deg) translate3d(-37px, 123px, 0);
-          transform: rotate(-45deg) translate3d(-37px, 123px, 0);
+  transform: rotate(-45deg) translate3d(-37px, 123px, 0);
   font-size: 300%;
-  margin: 5px 150px 100px 100px;
+  margin: 0px 48px 0px 62px;
   text-transform: uppercase;
 }
+
 .text a {
   color: black;
   text-decoration: none;
@@ -558,10 +575,12 @@ main {
 .highlight {
   transition: all 2s ease-out;
 }
+
 .highlight:hover {
   cursor: pointer;
   color: white;
 }
+
 .highlight:hover:not(a) {
   background-color: white;
 }
